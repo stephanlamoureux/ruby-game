@@ -31,6 +31,7 @@ class Player
 end
 
 # example code
+# will only run when player.rb is executed individually
 
 if __FILE__ == $0
   player = Player.new("moe")

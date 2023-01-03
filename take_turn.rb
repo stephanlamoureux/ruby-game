@@ -9,7 +9,7 @@ module TakeTurn
     when 1..2
       player.blam
     when 3..4
-      puts "#{player.name} was skipped."
+      puts "\n#{player.name} was skipped."
     else
       player.w00t
     end

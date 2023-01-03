@@ -15,7 +15,7 @@ describe Player do
   end
 
   it "has a string representation" do
-    @player.to_s.should == "I'm Larry with a health of 150 and a score of 155."
+    @player.to_s.should == "Larry has 150 health and a score of 155.\n"
   end
 
   it "computes a score as the sum of its health and length of name" do
@@ -48,6 +48,20 @@ describe Player do
 
     it "is weak" do
       @player.should_not be_strong
+    end
+  end
+
+  context "in a collection of players" do
+    before do
+      @player1 = Player.new("moe", 100)
+      @player2 = Player.new("larry", 200)
+      @player3 = Player.new("curly", 300)
+
+      @players = [@player1, @player2, @player3]
+    end
+
+    it "is sorted by decreasing score" do
+      @players.sort.should == [@player3, @player2, @player1]
     end
   end
 end

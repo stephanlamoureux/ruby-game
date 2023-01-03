@@ -16,7 +16,7 @@ describe Game do
 
   it "w00ts player with a roll of 5 or 6" do
     Die.any_instance.stub(:roll).and_return(5)
-    # RSpec 3
+    # RSpec 3:
     # allow_any_instance_of(Die).to receive(:roll).and_return(5)
 
     @game.play(2)

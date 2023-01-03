@@ -6,7 +6,7 @@ describe Player do
 
   it "has a capitalized name" do
     @player.name.should == "Larry"
-    # RSpec 3
+    # RSpec 3:
     # expect(player.name).to eq("Larry")
   end
 
@@ -39,7 +39,7 @@ describe Player do
 
     it "is strong" do
       @player.should be_strong
-      # shortened version of @player.strong?.should be_strong
+      # above is the shortened version of: @player.strong?.should be_strong
     end
   end
 
